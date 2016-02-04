@@ -6,39 +6,50 @@
 
 // Tamano base
 html{
-	font-size: 16px;
+	font-size: 14px;
 }
 
 body{
-	font-family: Arial,Helvetica,sans-serif;
+	margin: 0;
+	font-family: 'Open Sans', sans-serif;
+	text-rendering: optimizeLegibility;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	-moz-font-feature-settings: "liga", "kern";
 	min-width: 320px;
 	cursor: default;
+
+	* {
+		box-sizing: border-box;
+		-moz-box-sizing: border-box;
+		-webkit-box-sizing: border-box;
+		-o-box-sizing: border-box;
+	}
 }
 
 
 // Container
-.ux-wrapper {
+.gb-wrapper {
 	width: auto;
-	max-width: 1460px;
+	max-width: 1366px;
 	margin: 0 auto;
-	padding: 15px 1%;
 }
 
 
 
 // Links
 a {
-	color: $actions-3;
+	color: $blue-dark;
 	cursor: pointer;
 	text-decoration: none;
 
 	&:hover, &:active, &.active {
-  		color: $actions-2;
+  		color: $blue-dark;
   		text-decoration: underline;
 	}
 
 	&:visited {
-		color: $actions-3;
+		color: $blue-dark;
 	}
 
 }
@@ -67,11 +78,11 @@ li{
 
 
 // Comportamientos Left - Righ
-.ux-common-pull-left {
+.gb-pull-left {
 	float: left !important;
 }
 
-.ux-common-pull-right {
+.gb-pull-right {
 	float: right !important;
 }
 
@@ -81,12 +92,12 @@ li{
 
 @include col-small{
 	// Oculta solo en mobile
-	.ux-common-hide-small {
+	.gb-hide-small {
 		display: none !important;
 	}
 
 	// Oculta solo en mobile
-	.ux-common-show-small {
+	.gb-show-small {
 		display: block !important;
 	}
 }
@@ -94,12 +105,12 @@ li{
 
 @include col-medium{
 	// Oculta solo en tablet
-	.ux-common-hide-medium {
+	.gb-hide-medium {
 		display: none !important;
 	}
 	
 	// Oculta solo en tablet
-	.ux-common-show-medium {
+	.gb-show-medium {
 		display: block !important;
 	}
 }
@@ -107,12 +118,12 @@ li{
 	
 @include col-large{
 	// Oculta solo en desktop
-	.ux-common-hide-large {
+	.gb-hide-large {
 		display: none !important;
 	}
 	
 	// Oculta solo en desktop
-	.ux-common-show-large {
+	.gb-show-large {
 		display: block !important;		
 	}
 }
@@ -120,18 +131,13 @@ li{
 
 @include col-extra-large{
 	// Oculta solo en large
-	.ux-common-hide-extra-large {
+	.gb-hide-extra-large {
 		display: none !important;
 	}
 	
 	// Oculta solo en large
-	.ux-common-show-extra-large {
+	.gb-show-extra-large {
 		display: block !important;
-	}
-
-	.ux-wrapper {
-		padding-left: 0;
-		padding-right: 0;
 	}
 }
 

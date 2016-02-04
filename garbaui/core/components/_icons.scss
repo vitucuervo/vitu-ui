@@ -1,4 +1,4 @@
-@import "fonts";
+@import "../mixins/fonts";
 
 [class^="icon-"]:before, [class*=" icon-"]:before {
   font-family: "epi";
